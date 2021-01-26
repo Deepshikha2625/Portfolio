@@ -1,0 +1,71 @@
+/*for everything*/
+*{
+    margin:0;
+    padding:0;
+    color:white;
+}
+/*body background color styling*/
+body{
+    background-color: black;
+}
+/*styling for naviagtion <a> tag , <a>tag classname is headermenu*/
+.headermenu{
+    transform:translate(130%,50%);
+}
+/*navigation tag */
+nav{
+    display: flex;
+}
+/*hamburger icon styling*/
+nav .fa{
+    font-size:40px;
+    display:none;  
+}
+/*navigation <a> tag styling*/
+nav a{
+    margin:10px;
+    font-size:1.9em;
+    text-decoration:none;
+    color:white;
+    transition:all .2s;
+}
+/*navigation <a> tag hover styling*/
+nav a:hover{
+    color:rgb(165,165,165);
+}
+/*media queries for tablet and phone mode*/
+@media (max-width:900px){
+    nav .fa{
+        display:flex;
+    }
+    nav .headermenu{
+        width:180px;
+        display:none;
+        flex-direction: column;
+        position: absolute;
+        top:55px;
+        left:10px;
+        background-color:rgba(255,255,255,0.1);
+        z-index:10;
+    }
+    nav .headermenu.active{
+        display:flex;
+    }
+}
+    @media (max-width: width 570px){
+        nav .headermenu{
+            width:440px;
+            flex-direction:row;
+            right:0px;
+        }    
+    }
+    @media (max-width: width 570px){
+        nav .headermenu{
+            width:440px;
+            flex-direction:row;
+            right:0px;
+        } 
+        nav .headermenu a{
+            font-size:0.9rem;
+        }   
+    }
